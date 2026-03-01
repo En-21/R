@@ -50,17 +50,20 @@
             padding: 20px 20px 40px;
         }
 
-       /* Alternativa: Agrandar el círculo */
-        .hero-image {
-            width: 170px;  /* SOLUCIÓN: Círculo más grande para que quepa el texto */
-            height: 170px;
-            border-radius: 50%;
-            border: 2px solid #2ecc71;
-            margin-bottom: 20px;
-            object-fit: contain; /* Sigue siendo buena práctica usar contain */
-            padding: 10px;      /* Espacio interior reducido */
-            background-color: #1a1a1a;
-        }
+       .hero-image {
+    width: 200px;           /* Un círculo más grande para que luzca el logo */
+    height: 200px;
+    border-radius: 50%;     /* Esto hace el círculo */
+    border: 3px solid #2ecc71; /* El borde verde que querías */
+    
+    /* LA SOLUCIÓN AL RECORTE: */
+    object-fit: contain;    /* Esto obliga a la imagen a mostrarse COMPLETA dentro del círculo */
+    padding: 20px;          /* Espacio de seguridad para que las letras no toquen el borde verde */
+    
+    background-color: transparent; /* Para que no se vea un cuadro negro si tu logo es PNG */
+    display: block;
+    margin: 0 auto 20px;
+}
 
         .greeting {
             font-family: 'Cinzel', serif;
