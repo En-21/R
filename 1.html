@@ -50,15 +50,18 @@
             padding: 20px 20px 40px;
         }
 
+        /* Reemplaza o edita esta clase */
         .hero-image {
-            width: 170px; /* Hacemos el anillo verde más grande */
-            height: 170px;
+            width: 130px; /* Tamaño del círculo contenedor */
+            height: 130px;
             border-radius: 50%;
-            object-fit: contain;
-            border: 2px solid var(--green-accent);
+            border: 2px solid #2ecc71; /* Un color verde brillante para el borde */
             margin-bottom: 20px;
-            padding: 35px; /* Aquí está la magia: empuja el logo hacia el centro */
-            background-color: var(--bg-color); /* Oculta los recortes si tu imagen no es transparente */
+            background-color: #1a1a1a; /* Fondo oscuro para el círculo, igual al diseño */
+            
+            /* -- ESTO ES LO IMPORTANTE -- */
+            object-fit: contain; /* SOLUCIÓN: Ajusta el logo para que quepa ENTERO dentro sin cortarse */
+            padding: 15px;      /* SOLUCIÓN: Da espacio interior para que el logo "ndlessta" no toque el borde y se vea completo */
         }
 
         .greeting {
