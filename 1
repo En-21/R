@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endlesstar | Define your Infinity</title>
+    <style>
+        /* Importar fuentes elegantes de Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@300;400;500&display=swap');
+
+        :root {
+            --bg-color: #121212;
+            --surface-color: #1e1e1e;
+            --text-main: #f5f5f5;
+            --text-muted: #a0a0a0;
+            --accent-color: #c4a977; /* Tono dorado/bronce apagado */
+            --border-color: #333;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0a0a0a;
+            color: var(--text-main);
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            line-height: 1.5;
+        }
+
+        /* Contenedor que simula la pantalla del móvil */
+        .mobile-container {
+            width: 100%;
+            max-width: 480px; /* Ancho máximo para mantener el estilo móvil en PC */
+            background-color: var(--bg-color);
+            min-height: 100vh;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 20px;
+        }
+
+        .brand-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            color: var(--text-main);
+        }
+
+        .menu-icon {
+            font-size: 1.5rem;
+            color: var(--text-main);
+            cursor: pointer;
+        }
+
+        /* Hero / Header Principal */
+        .hero {
+            text-align: center;
+            padding: 20px 20px 40px;
+        }
+
+        .hero-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent-color);
+            margin-bottom: 20px;
+            padding: 4px;
+        }
+
+        .greeting {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+        }
+
+        /* Botones de Acción */
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 0 20px 40px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--surface-color);
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-primary:hover {
+            border-color: var(--accent-color);
+            background-color: #252525;
+        }
+
+        /* Sección Portafolio */
+        .portfolio {
+            padding: 0 20px 40px;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            text-align: center;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            color: var(--accent-color);
+        }
+
+        .portfolio-card {
+            background-color: var(--surface-color);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        .portfolio-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .portfolio-content {
+            padding: 20px;
+        }
+
+        .portfolio-content h3 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .portfolio-content p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .portfolio-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Footer / Contacto */
+        footer {
+            background-color: #0d0d0d;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-text {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .contact-block p {
+            margin-bottom: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .copyright {
+            text-align: center;
+            font-size: 0.7rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mobile-container">
+        <header>
+            <div class="brand-name">ENDLESSTAR</div>
+            <div class="menu-icon">≡</div>
+        </header>
+
+        <section class="hero">
+            <img src="c015145c2297d5460ca430f0ccddf1c2.jpg" alt="Perfil Endlesstar" class="hero-image">
+            <h1 class="greeting">Define your Infinity</h1>
+            <p class="subtitle">Visión Estratégica & Prototipado Avanzado</p>
+        </section>
+
+        <section class="action-buttons">
+            <a href="#" class="btn btn-primary">Iniciar Proyecto / Cotizar</a>
+            <a href="#" class="btn btn-primary">Nuestros Servicios</a>
+            <a href="#" class="btn btn-primary">Contacto Directo</a>
+        </section>
+
+        <section class="portfolio">
+            <h2 class="section-title">PORTAFOLIO DESTACADO</h2>
+            
+            <div class="portfolio-card">
+                <img src="c015145c2297d5460ca430f0ccddf1c2.jpg" alt="Proyecto 1">
+                <div class="portfolio-content">
+                    <h3>Diseño y Manufactura de Precisión</h3>
+                    <p>Soluciones personalizadas con tolerancias exactas. Transformamos conceptos digitales en piezas físicas funcionales utilizando materiales técnicos de alta resistencia.</p>
+                    <a href="#" class="portfolio-link">Explorar Galería →</a>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <img src="c015145c2297d5460ca430f0ccddf1c2.jpg" alt="Proyecto 2">
+                <div class="portfolio-content">
+                    <h3>Integración Electrónica y Carcasas</h3>
+                    <p>Desarrollo de envolventes estéticos y funcionales para proyectos de hardware y circuitos personalizados, optimizados para ensamblaje.</p>
+                    <a href="#" class="portfolio-link">Ver Detalles →</a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <h2 class="section-title">NUESTRO COMPROMISO</h2>
+            <p class="footer-text">Materializamos ideas superando los límites convencionales del diseño y la fabricación digital.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-block">
+                    <p><strong>Ubicación</strong></p>
+                    <p>Ciudad de México, CDMX</p>
+                    <p>México</p>
+                </div>
+                <div class="contact-block">
+                    <p><strong>Contacto</strong></p>
+                    <p>contacto@endlesstar.com</p>
+                    <p>WA: Disponible</p>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="#">INSTAGRAM</a>
+                <a href="#">LINKEDIN</a>
+            </div>
+
+            <p class="copyright">© 2026 Endlesstar. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
