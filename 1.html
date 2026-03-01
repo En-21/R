@@ -50,18 +50,16 @@
             padding: 20px 20px 40px;
         }
 
-        /* Reemplaza o edita esta clase */
+       /* Alternativa: Agrandar el círculo */
         .hero-image {
-            width: 130px; /* Tamaño del círculo contenedor */
-            height: 130px;
+            width: 170px;  /* SOLUCIÓN: Círculo más grande para que quepa el texto */
+            height: 170px;
             border-radius: 50%;
-            border: 2px solid #2ecc71; /* Un color verde brillante para el borde */
+            border: 2px solid #2ecc71;
             margin-bottom: 20px;
-            background-color: #1a1a1a; /* Fondo oscuro para el círculo, igual al diseño */
-            
-            /* -- ESTO ES LO IMPORTANTE -- */
-            object-fit: contain; /* SOLUCIÓN: Ajusta el logo para que quepa ENTERO dentro sin cortarse */
-            padding: 15px;      /* SOLUCIÓN: Da espacio interior para que el logo "ndlessta" no toque el borde y se vea completo */
+            object-fit: contain; /* Sigue siendo buena práctica usar contain */
+            padding: 10px;      /* Espacio interior reducido */
+            background-color: #1a1a1a;
         }
 
         .greeting {
