@@ -50,19 +50,21 @@
             padding: 20px 20px 40px;
         }
 
-       .hero-image {
-    width: 200px;           /* Un círculo más grande para que luzca el logo */
-    height: 200px;
-    border-radius: 50%;     /* Esto hace el círculo */
-    border: 3px solid #2ecc71; /* El borde verde que querías */
+      .hero-image {
+    width: 180px; 
+    height: 180px;
+    border-radius: 50%;
+    border: 2px solid #2ecc71;
     
-    /* LA SOLUCIÓN AL RECORTE: */
-    object-fit: contain;    /* Esto obliga a la imagen a mostrarse COMPLETA dentro del círculo */
-    padding: 20px;          /* Espacio de seguridad para que las letras no toquen el borde verde */
+    /* Esto elimina el margen negro visual entre el logo y el borde */
+    object-fit: contain;
+    padding: 10px; /* Un poco de aire para que las letras no choquen con el verde */
     
-    background-color: transparent; /* Para que no se vea un cuadro negro si tu logo es PNG */
+    /* Forzamos que el fondo del círculo sea el mismo que el de la web */
+    background-color: var(--bg-color); 
+    
     display: block;
-    margin: 0 auto 0px;
+    margin: 0 auto 20px;
 }
 
         .greeting {
