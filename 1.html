@@ -51,14 +51,14 @@
         }
 
         .hero-image {
-            width: 130px; /* Tamaño del contenedor circular */
-            height: 130px; /* Tamaño del contenedor circular */
-            border-radius: 50%; /* Hace el contenedor circular */
-            object-fit: contain; /* SOLUCIÓN: Escala la imagen dentro sin cortarla */
-            border: 2px solid var(--green-accent); /* SOLUCIÓN: Borde verde */
+            width: 170px; /* Hacemos el anillo verde más grande */
+            height: 170px;
+            border-radius: 50%;
+            object-fit: contain;
+            border: 2px solid var(--green-accent);
             margin-bottom: 20px;
-            padding: 25px; /* SOLUCIÓN: Más espacio interno para que el logo se vea más pequeño y escalado */
-            background-color: var(--surface-color); /* Fondo del círculo para que el logo resalte si no es transparente */
+            padding: 35px; /* Aquí está la magia: empuja el logo hacia el centro */
+            background-color: var(--bg-color); /* Oculta los recortes si tu imagen no es transparente */
         }
 
         .greeting {
