@@ -12,7 +12,8 @@
             --surface-color: #1a1a1a;
             --text-main: #f5f5f5;
             --text-muted: #a0a0a0;
-            --accent-color: #c4a977; 
+            --accent-color: #c4a977; /* Dorado original para otros elementos */
+            --green-accent: #2ecc71; /* Nuevo verde vibrante para el logo */
             --border-color: #333;
         }
 
@@ -50,13 +51,14 @@
         }
 
         .hero-image {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--accent-color);
+            width: 130px; /* Tamaño del contenedor circular */
+            height: 130px; /* Tamaño del contenedor circular */
+            border-radius: 50%; /* Hace el contenedor circular */
+            object-fit: contain; /* SOLUCIÓN: Escala la imagen dentro sin cortarla */
+            border: 2px solid var(--green-accent); /* SOLUCIÓN: Borde verde */
             margin-bottom: 20px;
-            padding: 4px;
+            padding: 15px; /* SOLUCIÓN: Más espacio interno para que el logo se vea más pequeño y escalado */
+            background-color: var(--surface-color); /* Fondo del círculo para que el logo resalte si no es transparente */
         }
 
         .greeting {
@@ -365,15 +367,14 @@
 
         function openModal() {
             modal.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Evita que el fondo haga scroll
+            document.body.style.overflow = 'hidden'; 
         }
 
         function closeModal() {
             modal.classList.remove('active');
-            document.body.style.overflow = 'auto'; // Restaura el scroll
+            document.body.style.overflow = 'auto'; 
         }
 
-        // Cerrar modal al hacer clic fuera del cuadro
         window.onclick = function(event) {
             if (event.target == modal) {
                 closeModal();
